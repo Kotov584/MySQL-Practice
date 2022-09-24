@@ -1,0 +1,27 @@
+1.	Show all the vendors of cars.
+SELECT DISTINCT productVendor FROM `products` WHERE productLine LIKE '%car%'
+2.	Show all the cars (the ones with the highest by price first) .
+SELECT * FROM `products` ORDER BY buyPrice DESC
+3.	Show the names and extension of all the employees that are “Sales Rep” and report to the employee with number “1102”.
+SELECT firstName, lastName, extension FROM `employees` WHERE jobTitle = 'Sales Rep' AND reportsTo = 1102
+4.	Show all the records for the orders that their total value is in the range [1000, 5000).
+5.	Show the order dates of all the orders that have been made by the customer with number 121 and have been shipped. 
+SELECT orderDate FROM `orders` WHERE customerNumber = 121 AND status = 'Shipped'
+6.	Show all the orders whose check number contain the letter “P”.
+SELECT * FROM `payments` WHERE checkNumber LIKE 'P%'
+7.	Show all the orders whose check number start with the letter “H”.
+SELECT * FROM `payments` WHERE checkNumber LIKE 'H%'
+8.	Show all the orders whose check number contains the number 59. 
+SELECT * FROM `payments` WHERE checkNumber LIKE '%59%'
+9.	Show all the orders for which the numerical part of the check number start with the number 6. 
+10.	Show all offices located in USA and FRANCE
+SELECT * FROM `offices` WHERE country IN ('USA', 'France')
+11.	Show all customers that are in NYC, Nantes, Stavern
+SELECT * FROM `customers` WHERE city IN ('NYC', 'Nantes', 'Stavern')
+12.	Show all customers that are in the same counties as the office
+13.	Show all employees that are Sales Rep, VPSales and/or VP Marketing
+SELECT * FROM `employees` WHERE jobTitle IN ('Sales Rep', 'VPSales', 'VP Marketing')
+14.	Show the number of all employees that are Sales Rep, VPSales and/or VP Marketing
+SELECT count(*) FROM `employees` WHERE jobTitle IN ('Sales Rep', 'VPSales', 'VP Marketing')
+15.	Show the name and phone of the customer with check number HQ336336.
+16.	Show the id, name and phone of the customers with check numbers JM555205", "HQ55022", "GG31455")
