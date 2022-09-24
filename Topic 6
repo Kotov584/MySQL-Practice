@@ -1,0 +1,14 @@
+a)	Show all the data from the table customers
+SELECT * FROM `customers`
+b)	Show the names of all the products that the company sells
+SELECT productName FROM `products`
+c)	For all the offices show their ID, State and telephone number
+SELECT officeCode, state, phone FROM `offices`
+d)	Show all the payments of the customer with ID 104
+SELECT * FROM `paymens` WHERE customerNumber = ‘104’
+e)	Show all the order details ordered by ascending product code
+SELECT * FROM `orderdetails` ORDER BY productCode ASC
+f)	Show only the 10 first records for the table orderdetails 
+SELECT * FROM `orderdetails` LIMIT 10
+g)	Calculate the total amount of payments received by the company
+SELECT SUM(amount) FROM `payments`
